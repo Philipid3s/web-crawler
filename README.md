@@ -1,14 +1,35 @@
-  # Web Crawler
-  
-  Web Crawler (proto, not finalized) for Node.js
-  
-  ### Prerequisites
-  
-  * cheerio : implementation of core jQuery designed specifically for the server (https://www.npmjs.com/package/cheerio)
+# Web Crawler
+
+Prototype web crawler for Node.js.
+
+## Requirements
+
+- Node.js `>=20.18.1`
+
+## Setup
+
+```bash
+npm install
 ```
-$ npm install cheerio
+
+## Configuration
+
+Edit [`config.js`](./config.js):
+
+- `url`: seed URL to crawl (required)
+- `levelMax`: max crawl depth from seed URL
+- `sameHostOnly`: restrict crawl to the seed host
+- `requestTimeoutMs`: per-request timeout in milliseconds
+
+## Run
+
+```bash
+npm start
 ```
-  * request : package to make http calls https://www.npmjs.com/package/request)
-```
-$ npm install request
+
+## Scripts
+
+```bash
+npm run lint
+npm test
 ```

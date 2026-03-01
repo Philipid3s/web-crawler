@@ -1,10 +1,12 @@
-var config = {};
+const config = {};
 
-// url to analyze
+// URL to analyze
 config.url = "";
-// file path to export the results (json format)
-config.outputPath = "";
-// level max - depth of the recursive call
+// max depth to crawl from config.url
 config.levelMax = 1;
+// only crawl URLs on the same host as config.url
+config.sameHostOnly = true;
+// timeout per HTTP request in milliseconds
+config.requestTimeoutMs = 10000;
 
 module.exports = config;
